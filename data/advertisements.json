@@ -45,5 +45,18 @@
     ],
     "price": 155,
     "date": "2024-06-22T02:13:17.179Z"
+  },
+  {
+    "id": "1719055940816",
+    "title": "tytul",
+    "description": " nowa",
+    "author": "user1",
+    "category": "zdrowie",
+    "tags": [
+      "zdrowie",
+      "ogolne"
+    ],
+    "price": 155,
+    "date": "2024-06-22T11:32:20.816Z"
   }
 ]

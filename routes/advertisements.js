@@ -11,10 +11,10 @@ const {
 } = require("../controllers/advertisementController");
 
 router.post("/", auth, createAdvertisement);
+router.get("/search", searchAdvertisements);
 router.get("/:id", getAdvertisementById);
 router.get("/", getAllAdvertisements);
 router.put("/:id", auth, updateAdvertisement);
 router.delete("/:id", auth, deleteAdvertisement);
-router.get("/search", searchAdvertisements);
 
 module.exports = router;

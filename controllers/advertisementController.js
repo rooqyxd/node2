@@ -44,6 +44,7 @@ exports.getAllAdvertisements = (req, res) => {
 	const advertisements = readDataFromFile();
 	res.json({ message: "Ogłoszenia podane", data: advertisements });
 };
+
 exports.updateAdvertisement = (req, res) => {
 	const advertisements = readDataFromFile();
 	const index = advertisements.findIndex((ad) => ad.id === req.params.id);
@@ -80,34 +81,26 @@ exports.searchAdvertisements = (req, res) => {
 	if (title) {
 		const titleLower = title.toLowerCase();
 		results = results.filter((ad) => ad.title.toLowerCase().includes(titleLower));
-		console.log("Results after title filter:", results);
 	}
 	if (description) {
 		const descriptionLower = description.toLowerCase();
 		results = results.filter((ad) => ad.description.toLowerCase().includes(descriptionLower));
-		console.log("Results after description filter:", results);
 	}
 	if (minPrice) {
 		results = results.filter((ad) => ad.price >= parseFloat(minPrice));
-		console.log("Results after minPrice filter:", results);
-		res.json({ data: results });
 	}
 	if (maxPrice) {
 		results = results.filter((ad) => ad.price <= parseFloat(maxPrice));
-		console.log("Results after maxPrice filter:", results);
 	}
 	if (minDate) {
 		results = results.filter((ad) => new Date(ad.date) >= new Date(minDate));
-		console.log("Results after minDate filter:", results);
 	}
 	if (maxDate) {
 		results = results.filter((ad) => new Date(ad.date) <= new Date(maxDate));
-		console.log("Results after maxDate filter:", results);
 	}
 	if (category) {
 		const categoryLower = category.toLowerCase();
 		results = results.filter((ad) => ad.category.toLowerCase() === categoryLower);
-		console.log("Results after category filter:", results);
 	}
 	if (tags) {
 		const tagArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
@@ -115,7 +108,6 @@ exports.searchAdvertisements = (req, res) => {
 			const adTagsLower = ad.tags.map((tag) => tag.toLowerCase());
 			return tagArray.every((tag) => adTagsLower.includes(tag));
 		});
-		console.log("Results after tags filter:", results);
 	}
 
 	res.json(results);
