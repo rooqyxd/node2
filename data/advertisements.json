@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1718996700395",
+    "title": "sprzedam nerke",
+    "description": "nerka - nowa",
+    "author": "jan pawel",
+    "category": "zdrowie",
+    "tags": [
+      "zdrowie",
+      "ogolne"
+    ],
+    "price": 50055213444
+  },
+  {
+    "id": "1719019014009",
+    "title": "super hulajnoga",
+    "description": "hulajka xd",
+    "author": "user1",
+    "category": "pojazd",
+    "tags": [
+      "pojazd"
+    ],
+    "price": 2133
+  },
+  {
+    "id": "1719019057289",
+    "title": "super stol",
+    "description": "stol",
+    "author": "user1",
+    "category": "mebel",
+    "tags": [
+      "mebel"
+    ],
+    "price": 3000
+  },
+  {
+    "id": "1719022397178",
+    "title": "noobek",
+    "description": " nowa",
+    "author": "user1",
+    "category": "zdrowie",
+    "tags": [
+      "zdrowie",
+      "ogolne"
+    ],
+    "price": 155,
+    "date": "2024-06-22T02:13:17.179Z"
+  }
+]
